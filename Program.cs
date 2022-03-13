@@ -6,19 +6,23 @@ namespace Array
     {
         public static void Main(string[] args)
         {
-            //Criação de lista de conta corrente (array de ContaCorrente) em Program.cs
+            ListaDeContaCorrente lista = new ListaDeContaCorrente();
 
-            ContaCorrente[] contas = new ContaCorrente[]
-            {
-                new ContaCorrente(45, 12345),
-                new ContaCorrente(80, 67812),
-                new ContaCorrente(23, 34457)
-            };
+            lista.Adicionar(new ContaCorrente(123, 2435));
+            lista.Adicionar(new ContaCorrente(80, 3425));
+            lista.Adicionar(new ContaCorrente(50, 5521));
+            lista.Adicionar(new ContaCorrente(50, 5521));
+            lista.Adicionar(new ContaCorrente(30, 5412));
 
-            for(int i = 0; i < contas.Length; i++)
-            {
-                Console.WriteLine($"Agência: {contas[i].Agencia} || Conta: {contas[i].Conta}");
-            }
+            lista.Adicionar(new ContaCorrente(30, 5412));
+            lista.Adicionar(new ContaCorrente(30, 5412));
+            lista.Adicionar(new ContaCorrente(30, 5412));
+            lista.Adicionar(new ContaCorrente(30, 5412));
+            lista.Adicionar(new ContaCorrente(30, 5412));
+
+            lista.Adicionar(new ContaCorrente(30, 5412));
+            lista.Adicionar(new ContaCorrente(30, 5412));
+
         }
     }
 }

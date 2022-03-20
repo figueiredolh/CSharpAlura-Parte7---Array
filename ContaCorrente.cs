@@ -15,5 +15,13 @@ namespace Array
             Agencia = agencia;
             Conta = conta;
         }
+        public override bool Equals(object? obj)
+        {
+            ContaCorrente? outraConta = obj as ContaCorrente;
+            if (outraConta == null || outraConta is not ContaCorrente) {
+                return false;
+            };
+            return Agencia == outraConta.Agencia && Conta == outraConta.Conta;
+        }
     }
 }

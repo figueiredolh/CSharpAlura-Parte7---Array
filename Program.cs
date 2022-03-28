@@ -19,6 +19,16 @@ namespace Array
             //Removendo uma conta
 
             lista.Remover(new ContaCorrente(50, 5111));
+
+            //Buscar uma ContaCorrente pelo indice
+
+            var getCcPorMetodo = lista.GetItemNoIndice(2);
+            Console.WriteLine(getCcPorMetodo.Conta);
+
+            var getCcPorIndexador = lista[2];
+            Console.WriteLine(getCcPorIndexador.Conta);
+
+            Console.WriteLine("Os dois CC são iguais: " + (getCcPorMetodo.Conta == getCcPorIndexador.Conta));
         }
     }
 }

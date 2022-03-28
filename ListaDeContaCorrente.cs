@@ -70,5 +70,25 @@ namespace Array
 
             _lista = novoArray;
         }
+
+        public ContaCorrente GetItemNoIndice(int indice)
+        {
+            if (indice >= _proximaPosicao) //indice apontando para posição sem valor
+            {
+                throw new ArgumentOutOfRangeException("Lista não possui elemento neste índice!");
+            }
+
+            return _lista[indice];
+        }
+
+        //Indexador - Permitir buscar ContaCorrente com []
+
+        public ContaCorrente this[int i]
+        {
+            get
+            {
+                return GetItemNoIndice(i);
+            }
+        }
     }
 }
